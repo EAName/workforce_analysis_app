@@ -1,0 +1,109 @@
+from abc import ABC, abstractmethod
+import pandas as pd
+from typing import Any, Dict, Optional
+from utils.logger import logger
+from config.config import config
+
+class BaseAgent(ABC):
+    """Base class for all analysis agents"""
+    
+    def __init__(self, name: str):
+        self.name = name
+        self.logger = logger
+        self.config = config
+    
+    @abstractmethod
+    def analyze(self, data: pd.DataFrame, **kwargs) -> Dict[str, Any]:
+        """Perform analysis on the data"""
+        pass
+    
+    def validate_input(self, data: pd.DataFrame) -> bool:
+        """Validate input data"""
+        try:
+            # Check if data is empty
+            if data.empty:
+                self.logger.error("Input data is empty")
+                return False
+            
+            # Check required columns
+            required_cols = self.config.data.required_columns.keys()
+            missing_cols = [col for col in required_cols if col not in data.columns]
+            if missing_cols:
+                self.logger.error(f"Missing required columns: {missing_cols}")
+                return False
+            
+            return True
+        
+        except Exception as e:
+            self.logger.error(f"Error validating input: {str(e)}")
+            return False
+    
+    def preprocess_data(self, data: pd.DataFrame) -> pd.DataFrame:
+        """Preprocess the data according to configuration"""
+        try:
+            df = data.copy()
+            
+            # Handle missing values
+            if 'handle_missing_values' in self.config.data.preprocessing_steps:
+                for col in self.config.data.numeric_columns:
+                    if col in df.columns and df[col].isnull().any():
+                        df[col].fillna(df[col].median(), inplace=True)
+                
+                for col in self.config.data.categorical_columns:
+                    if col in df.columns and df[col].isnull().any():
+                        df[col].fillna(df[col].mode()[0], inplace=True)
+            
+            # Convert dates
+            if 'convert_dates' in self.config.data.preprocessing_steps:
+                for col in self.config.data.date_columns:
+                    if col in df.columns:
+                        try:
+                            df[col] = pd.to_datetime(df[col])
+                        except:
+                            self.logger.warning(f"Could not convert {col} to datetime")
+            
+            return df
+        
+        except Exception as e:
+            self.logger.error(f"Error preprocessing data: {str(e)}")
+            raise
+    
+    def save_results(self, results: Dict[str, Any], filename: str):
+        """Save analysis results"""
+        try:
+            import json
+            from pathlib import Path
+            
+            # Create results directory if it doesn't exist
+            results_dir = Path("results")
+            results_dir.mkdir(exist_ok=True)
+            
+            # Save results
+            with open(results_dir / filename, 'w') as f:
+                json.dump(results, f, indent=4)
+            
+            self.logger.info(f"Results saved to {filename}")
+        
+        except Exception as e:
+            self.logger.error(f"Error saving results: {str(e)}")
+            raise
+    
+    def load_results(self, filename: str) -> Optional[Dict[str, Any]]:
+        """Load saved analysis results"""
+        try:
+            import json
+            from pathlib import Path
+            
+            results_file = Path("results") / filename
+            if not results_file.exists():
+                self.logger.warning(f"Results file {filename} not found")
+                return None
+            
+            with open(results_file, 'r') as f:
+                results = json.load(f)
+            
+            return results
+        
+        except Exception as e:
+            self.logger.error(f"Error loading results: {str(e)}")
+            return None 

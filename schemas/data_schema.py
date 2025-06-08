@@ -1,0 +1,157 @@
+from pydantic import BaseModel, Field, validator
+from typing import Dict, List, Optional, Union
+from enum import Enum
+import pandas as pd
+
+class ColumnType(str, Enum):
+    """Enum for column data types"""
+    INTEGER = "int64"
+    FLOAT = "float64"
+    STRING = "object"
+    DATETIME = "datetime64[ns]"
+    BOOLEAN = "bool"
+
+class ColumnDefinition(BaseModel):
+    """Definition of a data column"""
+    name: str
+    type: ColumnType
+    required: bool = True
+    description: Optional[str] = None
+    allowed_values: Optional[List[Union[str, int, float]]] = None
+    min_value: Optional[Union[int, float]] = None
+    max_value: Optional[Union[int, float]] = None
+
+    @validator('allowed_values')
+    def validate_allowed_values(cls, v, values):
+        if v is not None and values.get('type') == ColumnType.INTEGER:
+            if not all(isinstance(x, int) for x in v):
+                raise ValueError("Allowed values for integer columns must be integers")
+        return v
+
+class DataSchema(BaseModel):
+    """Schema for HR data"""
+    columns: Dict[str, ColumnDefinition]
+    primary_key: str = "EmployeeNumber"
+    version: str = "1.0.0"
+
+    def validate_dataframe(self, df: pd.DataFrame) -> bool:
+        """Validate a DataFrame against the schema"""
+        # Check required columns
+        missing_cols = [col for col, defn in self.columns.items() 
+                       if defn.required and col not in df.columns]
+        if missing_cols:
+            raise ValueError(f"Missing required columns: {missing_cols}")
+
+        # Check column types
+        for col, defn in self.columns.items():
+            if col in df.columns:
+                if df[col].dtype != defn.type:
+                    raise ValueError(
+                        f"Column {col} has incorrect type. "
+                        f"Expected {defn.type}, got {df[col].dtype}"
+                    )
+
+                # Check allowed values
+                if defn.allowed_values is not None:
+                    invalid_values = df[~df[col].isin(defn.allowed_values)][col].unique()
+                    if len(invalid_values) > 0:
+                        raise ValueError(
+                            f"Column {col} contains invalid values: {invalid_values}"
+                        )
+
+                # Check numeric ranges
+                if defn.type in [ColumnType.INTEGER, ColumnType.FLOAT]:
+                    if defn.min_value is not None:
+                        if (df[col] < defn.min_value).any():
+                            raise ValueError(
+                                f"Column {col} contains values below minimum {defn.min_value}"
+                            )
+                    if defn.max_value is not None:
+                        if (df[col] > defn.max_value).any():
+                            raise ValueError(
+                                f"Column {col} contains values above maximum {defn.max_value}"
+                            )
+
+        return True
+
+# Define the HR data schema
+HR_SCHEMA = DataSchema(
+    columns={
+        "EmployeeNumber": ColumnDefinition(
+            name="EmployeeNumber",
+            type=ColumnType.INTEGER,
+            description="Unique identifier for each employee",
+            min_value=1
+        ),
+        "Age": ColumnDefinition(
+            name="Age",
+            type=ColumnType.INTEGER,
+            description="Employee age",
+            min_value=18,
+            max_value=100
+        ),
+        "Department": ColumnDefinition(
+            name="Department",
+            type=ColumnType.STRING,
+            description="Employee department",
+            allowed_values=["IT", "HR", "Finance", "Marketing", "Operations"]
+        ),
+        "JobRole": ColumnDefinition(
+            name="JobRole",
+            type=ColumnType.STRING,
+            description="Employee job role",
+            allowed_values=["Developer", "Manager", "Analyst", "Designer", "Consultant"]
+        ),
+        "Salary": ColumnDefinition(
+            name="Salary",
+            type=ColumnType.INTEGER,
+            description="Annual salary",
+            min_value=0
+        ),
+        "YearsAtCompany": ColumnDefinition(
+            name="YearsAtCompany",
+            type=ColumnType.INTEGER,
+            description="Years of employment",
+            min_value=0,
+            max_value=50
+        ),
+        "JobSatisfaction": ColumnDefinition(
+            name="JobSatisfaction",
+            type=ColumnType.INTEGER,
+            description="Job satisfaction score",
+            min_value=1,
+            max_value=5
+        ),
+        "WorkLifeBalance": ColumnDefinition(
+            name="WorkLifeBalance",
+            type=ColumnType.INTEGER,
+            description="Work-life balance score",
+            min_value=1,
+            max_value=5
+        ),
+        "PerformanceRating": ColumnDefinition(
+            name="PerformanceRating",
+            type=ColumnType.INTEGER,
+            description="Performance rating",
+            min_value=1,
+            max_value=5
+        ),
+        "Attrition": ColumnDefinition(
+            name="Attrition",
+            type=ColumnType.STRING,
+            description="Whether the employee left the company",
+            allowed_values=["Yes", "No"]
+        ),
+        "HireDate": ColumnDefinition(
+            name="HireDate",
+            type=ColumnType.DATETIME,
+            description="Employee hire date"
+        ),
+        "TerminationDate": ColumnDefinition(
+            name="TerminationDate",
+            type=ColumnType.DATETIME,
+            required=False,
+            description="Employee termination date"
+        )
+    }
+) 
