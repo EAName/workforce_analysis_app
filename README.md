@@ -15,7 +15,7 @@ A Streamlit application for analyzing workforce data and predicting employee att
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/workforce_analysis_app.git
+git clone https://github.com/EAName/workforce_analysis_app.git
 cd workforce_analysis_app
 ```
 
