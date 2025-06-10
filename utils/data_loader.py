@@ -84,7 +84,7 @@ class DataLoader:
         
         # Get categorical and numeric columns from schema
         categorical_cols = [col for col, defn in self.schema.columns.items() 
-                          if defn.type == ColumnType.STRING and col not in ['Department', 'JobRole', 'Attrition']]
+                          if defn.type == ColumnType.STRING and col not in ['Department', 'JobRole', 'Attrition', 'EducationField', 'Gender', 'MaritalStatus']]
         numeric_cols = [col for col, defn in self.schema.columns.items() 
                        if defn.type in [ColumnType.INTEGER, ColumnType.FLOAT]]
         
