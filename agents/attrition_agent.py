@@ -3,10 +3,10 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import classification_report, roc_auc_score
+from sklearn.metrics import classification_report, roc_auc_score, accuracy_score
 import joblib
 import os
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, List
 from agents.base_agent import BaseAgent
 
 class AttritionAgent(BaseAgent):
@@ -18,21 +18,27 @@ class AttritionAgent(BaseAgent):
         self.scaler = None
         self.feature_columns = None
     
-    def train_model(self, data: pd.DataFrame) -> Tuple[RandomForestClassifier, StandardScaler, list]:
+    def train_model(self, df: pd.DataFrame) -> Tuple[RandomForestClassifier, StandardScaler, List[str]]:
         """Train the attrition prediction model"""
         try:
-            # Preprocess data using the standalone function to drop date columns
-            df = preprocess_data(data)
+            # Prepare features
+            feature_columns = [
+                'Age', 'Salary', 'YearsAtCompany', 'JobSatisfaction',
+                'WorkLifeBalance', 'PerformanceRating', 'Education',
+                'NumCompaniesWorked', 'TotalWorkingYears', 'TrainingTimesLastYear',
+                'YearsInCurrentRole', 'YearsSinceLastPromotion', 'YearsWithCurrManager'
+            ]
+            
+            # Create target variable (1 if left, 0 if stayed)
+            df['attrition_target'] = (df['Attrition'] == 'Yes').astype(int)
             
             # Prepare features and target
-            X = df.drop(['Attrition', 'EmployeeNumber'], axis=1, errors='ignore')
-            y = df['Attrition'].map({'Yes': 1, 'No': 0})
+            X = df[feature_columns]
+            y = df['attrition_target']
             
             # Split data
             X_train, X_test, y_train, y_test = train_test_split(
-                X, y,
-                test_size=self.config.model.test_size,
-                random_state=self.config.model.random_state
+                X, y, test_size=0.2, random_state=42
             )
             
             # Scale features
@@ -41,36 +47,20 @@ class AttritionAgent(BaseAgent):
             X_test_scaled = scaler.transform(X_test)
             
             # Train model
-            rf_params = self.config.model.model_params["RandomForest"].copy() if self.config.model.model_params and "RandomForest" in self.config.model.model_params else {}
-            rf_params.pop("n_estimators", None)
-            rf_params.pop("random_state", None)
             model = RandomForestClassifier(
-                n_estimators=self.config.model.n_estimators,
-                random_state=self.config.model.random_state,
-                **rf_params
+                n_estimators=100,
+                max_depth=10,
+                random_state=42
             )
             model.fit(X_train_scaled, y_train)
             
             # Evaluate model
             y_pred = model.predict(X_test_scaled)
-            y_pred_proba = model.predict_proba(X_test_scaled)[:, 1]
+            accuracy = accuracy_score(y_test, y_pred)
+            self.logger.info(f"Model accuracy: {accuracy:.2f}")
             
-            # Log evaluation metrics
-            self.logger.info("\nModel Evaluation:")
-            self.logger.info(classification_report(y_test, y_pred))
-            try:
-                self.logger.info(f"ROC AUC Score: {roc_auc_score(y_test, y_pred_proba):.3f}")
-            except ValueError as ve:
-                self.logger.warning(f"ROC AUC Score could not be computed: {ve}")
+            return model, scaler, feature_columns
             
-            # Save model and scaler
-            os.makedirs(self.config.model.model_dir, exist_ok=True)
-            joblib.dump(model, os.path.join(self.config.model.model_dir, 'attrition_model.joblib'))
-            joblib.dump(scaler, os.path.join(self.config.model.model_dir, 'attrition_scaler.joblib'))
-            joblib.dump(X.columns.tolist(), os.path.join(self.config.model.model_dir, 'attrition_features.joblib'))
-            
-            return model, scaler, X.columns.tolist()
-        
         except Exception as e:
             self.logger.error(f"Error training model: {str(e)}")
             raise
@@ -101,12 +91,20 @@ class AttritionAgent(BaseAgent):
             if not self.validate_input(df):
                 raise ValueError("Invalid input data")
             
-            # Load or train model if not already done
-            if not hasattr(self, 'model') or not hasattr(self, 'feature_columns'):
+            # Ensure model is trained
+            if not hasattr(self, 'model') or self.model is None:
                 self.model, self.scaler, self.feature_columns = self.train_model(df)
+                if self.model is None:
+                    self.logger.error("Model training failed, model is None.")
+                    raise ValueError("Model training failed, model is None.")
             
             # Get predictions
             results = predict_attrition(df)
+            
+            # If results is empty, raise a clear error
+            if len(results) == 0:
+                self.logger.error("Prediction results DataFrame is empty.")
+                raise ValueError("Prediction results DataFrame is empty.")
             
             # Calculate metrics
             high_risk_threshold = 0.7
@@ -115,10 +113,15 @@ class AttritionAgent(BaseAgent):
             risk_distribution = results['attrition_risk'].describe()
             
             # Get feature importance
-            feature_importance = self.get_feature_importance(df)
+            feature_importance = self.get_feature_importance()
+            
+            # Get high-risk employees
+            high_risk_employees = df[results['attrition_risk'] > high_risk_threshold].copy()
+            high_risk_employees['attrition_risk'] = results[results['attrition_risk'] > high_risk_threshold]['attrition_risk']
             
             return {
-                'risk_scores': results,
+                'risk_scores': results['attrition_risk'].values,
+                'high_risk_employees': high_risk_employees,
                 'metrics': {
                     'high_risk_count': high_risk_count,
                     'avg_risk': avg_risk,
@@ -130,10 +133,10 @@ class AttritionAgent(BaseAgent):
             self.logger.error(f"Error in analysis: {str(e)}")
             raise
     
-    def get_feature_importance(self, df: pd.DataFrame) -> pd.Series:
+    def get_feature_importance(self) -> pd.Series:
         """Compute feature importance from the trained model"""
-        if not hasattr(self, 'model') or not hasattr(self, 'feature_columns'):
-            raise ValueError("Model not trained. Call train_model first.")
+        if not hasattr(self, 'model') or self.model is None:
+            raise ValueError("Model is not trained. Cannot compute feature importance.")
         importances = self.model.feature_importances_
         return pd.Series(importances, index=self.feature_columns).sort_values(ascending=False)
 
