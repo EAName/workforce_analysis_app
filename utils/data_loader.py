@@ -77,54 +77,20 @@ class DataLoader:
             raise
     
     def _preprocess_data(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Preprocess the data according to configuration"""
-        try:
-            df_processed = df.copy()
-            
-            # Handle missing values
-            if 'handle_missing_values' in self.config.data.preprocessing_steps:
-                for col in self.config.data.numeric_columns:
-                    if col in df_processed.columns and df_processed[col].isnull().any():
-                        df_processed[col].fillna(df_processed[col].median(), inplace=True)
-                
-                for col in self.config.data.categorical_columns:
-                    if col in df_processed.columns and df_processed[col].isnull().any():
-                        df_processed[col].fillna(df_processed[col].mode()[0], inplace=True)
-            
-            # Convert dates
-            if 'convert_dates' in self.config.data.preprocessing_steps:
-                for col in self.config.data.date_columns:
-                    if col in df_processed.columns:
-                        try:
-                            df_processed[col] = pd.to_datetime(df_processed[col])
-                        except Exception as e:
-                            self.logger.warning(f"Could not convert {col} to datetime: {str(e)}")
-            
-            # Encode categorical variables
-            if 'encode_categorical' in self.config.data.preprocessing_steps:
-                for col in self.config.data.categorical_columns:
-                    if col in df_processed.columns and col != 'Department':
-                        df_processed = pd.get_dummies(
-                            df_processed,
-                            columns=[col],
-                            prefix=col,
-                            drop_first=True
-                        )
-            
-            # Scale numeric variables
-            if 'scale_numeric' in self.config.data.preprocessing_steps:
-                from sklearn.preprocessing import StandardScaler
-                scaler = StandardScaler()
-                numeric_cols = [col for col in self.config.data.numeric_columns 
-                              if col in df_processed.columns]
-                if numeric_cols:
-                    df_processed[numeric_cols] = scaler.fit_transform(df_processed[numeric_cols])
-            
-            return df_processed
+        """Preprocess the data for analysis."""
+        # Create a copy to avoid modifying the original
+        df_processed = df.copy()
         
-        except Exception as e:
-            self.logger.error(f"Error preprocessing data: {str(e)}")
-            raise
+        # Convert categorical variables to dummy variables
+        categorical_cols = [col for col in self.schema['categorical_columns'] 
+                          if col not in ['Department', 'JobRole']]  # Exclude Department and JobRole
+        df_processed = pd.get_dummies(df_processed, columns=categorical_cols, drop_first=True)
+        
+        # Handle missing values
+        numeric_cols = self.schema['numeric_columns']
+        df_processed[numeric_cols] = df_processed[numeric_cols].fillna(df_processed[numeric_cols].mean())
+        
+        return df_processed
     
     def save_processed_data(self, df: pd.DataFrame, filename: str):
         """Save processed data to file"""
