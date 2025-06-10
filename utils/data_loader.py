@@ -84,7 +84,7 @@ class DataLoader:
         
         # Get categorical and numeric columns from schema
         categorical_cols = [col for col, defn in self.schema.columns.items() 
-                          if defn.type == ColumnType.STRING and col not in ['Department', 'JobRole']]
+                          if defn.type == ColumnType.STRING and col not in ['Department', 'JobRole', 'Attrition']]
         numeric_cols = [col for col, defn in self.schema.columns.items() 
                        if defn.type in [ColumnType.INTEGER, ColumnType.FLOAT]]
         
@@ -93,6 +93,12 @@ class DataLoader:
         
         # Handle missing values
         df_processed[numeric_cols] = df_processed[numeric_cols].fillna(df_processed[numeric_cols].mean())
+        
+        # Ensure all required columns are present
+        required_cols = [col for col, defn in self.schema.columns.items() if defn.required]
+        missing_cols = [col for col in required_cols if col not in df_processed.columns]
+        if missing_cols:
+            raise ValueError(f"Missing required columns after preprocessing: {missing_cols}")
         
         return df_processed
     
