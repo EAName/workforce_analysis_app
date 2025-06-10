@@ -54,7 +54,12 @@ class DataLoader:
             # Check for missing values
             missing_ratio = df.isnull().sum() / len(df)
             high_missing_cols = missing_ratio[missing_ratio > self.config.data.max_missing_values]
-            
+
+            # Handle missing values in TerminationDate
+            if 'TerminationDate' in high_missing_cols:
+                df['TerminationDate'].fillna(pd.NaT, inplace=True)
+                high_missing_cols = high_missing_cols.drop('TerminationDate')
+
             if not high_missing_cols.empty:
                 if self.config.data.validation_strict:
                     raise ValueError(
