@@ -31,22 +31,31 @@ class DataLoader:
                 )
             
             # Read CSV file with explicit data types
-            dtype_dict = {
-                col: defn.type.value for col, defn in self.schema.columns.items()
-                if defn.type != ColumnType.DATETIME
-            }
-            df = pd.read_csv(
-                file_path,
-                dtype=dtype_dict,
-                parse_dates=['HireDate', 'TerminationDate']
-            )
-            self.logger.info(f"Successfully loaded data with {len(df)} rows")
+            try:
+                dtype_dict = {
+                    col: defn.type.value for col, defn in self.schema.columns.items()
+                    if defn.type != ColumnType.DATETIME
+                }
+                df = pd.read_csv(
+                    file_path,
+                    dtype=dtype_dict,
+                    parse_dates=['HireDate', 'TerminationDate']
+                )
+                self.logger.info(f"Successfully loaded data with {len(df)} rows")
+            except Exception as e:
+                raise ValueError(f"Error reading CSV file: {str(e)}")
             
             # Validate data
-            self._validate_data(df)
+            try:
+                self._validate_data(df)
+            except Exception as e:
+                raise ValueError(f"Data validation failed: {str(e)}")
             
             # Preprocess data
-            df = self._preprocess_data(df)
+            try:
+                df = self._preprocess_data(df)
+            except Exception as e:
+                raise ValueError(f"Data preprocessing failed: {str(e)}")
             
             return df
         

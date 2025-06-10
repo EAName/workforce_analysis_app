@@ -36,11 +36,13 @@ class DataSchema(BaseModel):
 
     def validate_dataframe(self, df: pd.DataFrame) -> bool:
         """Validate a DataFrame against the schema"""
+        errors = []
+        
         # Check required columns
         missing_cols = [col for col, defn in self.columns.items() 
                        if defn.required and col not in df.columns]
         if missing_cols:
-            raise ValueError(f"Missing required columns: {missing_cols}")
+            errors.append(f"Missing required columns: {missing_cols}")
 
         # Check column types
         for col, defn in self.columns.items():
@@ -48,7 +50,7 @@ class DataSchema(BaseModel):
                 expected_type = defn.type.value
                 actual_type = str(df[col].dtype)
                 if actual_type != expected_type:
-                    raise ValueError(
+                    errors.append(
                         f"Column {col} has incorrect type. "
                         f"Expected {expected_type}, got {actual_type}"
                     )
@@ -57,7 +59,7 @@ class DataSchema(BaseModel):
                 if defn.allowed_values is not None:
                     invalid_values = df[~df[col].isin(defn.allowed_values)][col].unique()
                     if len(invalid_values) > 0:
-                        raise ValueError(
+                        errors.append(
                             f"Column {col} contains invalid values: {invalid_values}"
                         )
 
@@ -65,14 +67,17 @@ class DataSchema(BaseModel):
                 if defn.type in [ColumnType.INTEGER, ColumnType.FLOAT]:
                     if defn.min_value is not None:
                         if (df[col] < defn.min_value).any():
-                            raise ValueError(
+                            errors.append(
                                 f"Column {col} contains values below minimum {defn.min_value}"
                             )
                     if defn.max_value is not None:
                         if (df[col] > defn.max_value).any():
-                            raise ValueError(
+                            errors.append(
                                 f"Column {col} contains values above maximum {defn.max_value}"
                             )
+
+        if errors:
+            raise ValueError("\n".join(errors))
 
         return True
 
