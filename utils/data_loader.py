@@ -103,7 +103,7 @@ class DataLoader:
             # Encode categorical variables
             if 'encode_categorical' in self.config.data.preprocessing_steps:
                 for col in self.config.data.categorical_columns:
-                    if col in df_processed.columns:
+                    if col in df_processed.columns and col != 'Department':
                         df_processed = pd.get_dummies(
                             df_processed,
                             columns=[col],
