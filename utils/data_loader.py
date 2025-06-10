@@ -6,6 +6,7 @@ from config.config import config
 from schemas.data_schema import HR_SCHEMA
 import os
 from pathlib import Path
+from schemas.data_schema import ColumnType
 
 class DataLoader:
     """Class for loading and validating HR data"""
@@ -81,13 +82,16 @@ class DataLoader:
         # Create a copy to avoid modifying the original
         df_processed = df.copy()
         
+        # Get categorical and numeric columns from schema
+        categorical_cols = [col for col, defn in self.schema.columns.items() 
+                          if defn.type == ColumnType.STRING and col not in ['Department', 'JobRole']]
+        numeric_cols = [col for col, defn in self.schema.columns.items() 
+                       if defn.type in [ColumnType.INTEGER, ColumnType.FLOAT]]
+        
         # Convert categorical variables to dummy variables
-        categorical_cols = [col for col in self.schema.config.data.categorical_columns 
-                          if col not in ['Department', 'JobRole']]  # Exclude Department and JobRole
         df_processed = pd.get_dummies(df_processed, columns=categorical_cols, drop_first=True)
         
         # Handle missing values
-        numeric_cols = self.schema.config.data.numeric_columns
         df_processed[numeric_cols] = df_processed[numeric_cols].fillna(df_processed[numeric_cols].mean())
         
         return df_processed
