@@ -82,12 +82,12 @@ class DataLoader:
         df_processed = df.copy()
         
         # Convert categorical variables to dummy variables
-        categorical_cols = [col for col in self.schema['categorical_columns'] 
+        categorical_cols = [col for col in self.schema.categorical_columns 
                           if col not in ['Department', 'JobRole']]  # Exclude Department and JobRole
         df_processed = pd.get_dummies(df_processed, columns=categorical_cols, drop_first=True)
         
         # Handle missing values
-        numeric_cols = self.schema['numeric_columns']
+        numeric_cols = self.schema.numeric_columns
         df_processed[numeric_cols] = df_processed[numeric_cols].fillna(df_processed[numeric_cols].mean())
         
         return df_processed
