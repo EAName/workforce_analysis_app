@@ -30,7 +30,7 @@ class DataLoader:
                 )
             
             # Read CSV file
-            df = pd.read_csv(file_path)
+            df = pd.read_csv(file_path, parse_dates=['HireDate'])
             self.logger.info(f"Successfully loaded data with {len(df)} rows")
             
             # Validate data
