@@ -1,0 +1,4044 @@
+{
+    "predictions": [
+        {
+            "EmployeeNumber": 1,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 2,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 3,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 4,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 5,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 6,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 7,
+            "attrition_risk": 0.66
+        },
+        {
+            "EmployeeNumber": 8,
+            "attrition_risk": 0.59
+        },
+        {
+            "EmployeeNumber": 9,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 10,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 11,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 12,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 13,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 14,
+            "attrition_risk": 0.63
+        },
+        {
+            "EmployeeNumber": 15,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 16,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 17,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 18,
+            "attrition_risk": 0.59
+        },
+        {
+            "EmployeeNumber": 19,
+            "attrition_risk": 0.59
+        },
+        {
+            "EmployeeNumber": 20,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 21,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 22,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 23,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 24,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 25,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 26,
+            "attrition_risk": 0.59
+        },
+        {
+            "EmployeeNumber": 27,
+            "attrition_risk": 0.59
+        },
+        {
+            "EmployeeNumber": 28,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 29,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 30,
+            "attrition_risk": 0.59
+        },
+        {
+            "EmployeeNumber": 31,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 32,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 33,
+            "attrition_risk": 0.59
+        },
+        {
+            "EmployeeNumber": 34,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 35,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 36,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 37,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 38,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 39,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 40,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 41,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 42,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 43,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 44,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 45,
+            "attrition_risk": 0.59
+        },
+        {
+            "EmployeeNumber": 46,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 47,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 48,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 49,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 50,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 51,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 52,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 53,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 54,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 55,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 56,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 57,
+            "attrition_risk": 0.59
+        },
+        {
+            "EmployeeNumber": 58,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 59,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 60,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 61,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 62,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 63,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 64,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 65,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 66,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 67,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 68,
+            "attrition_risk": 0.59
+        },
+        {
+            "EmployeeNumber": 69,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 70,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 71,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 72,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 73,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 74,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 75,
+            "attrition_risk": 0.59
+        },
+        {
+            "EmployeeNumber": 76,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 77,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 78,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 79,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 80,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 81,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 82,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 83,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 84,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 85,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 86,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 87,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 88,
+            "attrition_risk": 0.69
+        },
+        {
+            "EmployeeNumber": 89,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 90,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 91,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 92,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 93,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 94,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 95,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 96,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 97,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 98,
+            "attrition_risk": 0.69
+        },
+        {
+            "EmployeeNumber": 99,
+            "attrition_risk": 0.59
+        },
+        {
+            "EmployeeNumber": 100,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 101,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 102,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 103,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 104,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 105,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 106,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 107,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 108,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 109,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 110,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 111,
+            "attrition_risk": 0.59
+        },
+        {
+            "EmployeeNumber": 112,
+            "attrition_risk": 0.69
+        },
+        {
+            "EmployeeNumber": 113,
+            "attrition_risk": 0.69
+        },
+        {
+            "EmployeeNumber": 114,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 115,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 116,
+            "attrition_risk": 0.6
+        },
+        {
+            "EmployeeNumber": 117,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 118,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 119,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 120,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 121,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 122,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 123,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 124,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 125,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 126,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 127,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 128,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 129,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 130,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 131,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 132,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 133,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 134,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 135,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 136,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 137,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 138,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 139,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 140,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 141,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 142,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 143,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 144,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 145,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 146,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 147,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 148,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 149,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 150,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 151,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 152,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 153,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 154,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 155,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 156,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 157,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 158,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 159,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 160,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 161,
+            "attrition_risk": 0.73
+        },
+        {
+            "EmployeeNumber": 162,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 163,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 164,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 165,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 166,
+            "attrition_risk": 0.73
+        },
+        {
+            "EmployeeNumber": 167,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 168,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 169,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 170,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 171,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 172,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 173,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 174,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 175,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 176,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 177,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 178,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 179,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 180,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 181,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 182,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 183,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 184,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 185,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 186,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 187,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 188,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 189,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 190,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 191,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 192,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 193,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 194,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 195,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 196,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 197,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 198,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 199,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 200,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 201,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 202,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 203,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 204,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 205,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 206,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 207,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 208,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 209,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 210,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 211,
+            "attrition_risk": 0.64
+        },
+        {
+            "EmployeeNumber": 212,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 213,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 214,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 215,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 216,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 217,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 218,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 219,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 220,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 221,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 222,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 223,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 224,
+            "attrition_risk": 0.67
+        },
+        {
+            "EmployeeNumber": 225,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 226,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 227,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 228,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 229,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 230,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 231,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 232,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 233,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 234,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 235,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 236,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 237,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 238,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 239,
+            "attrition_risk": 0.65
+        },
+        {
+            "EmployeeNumber": 240,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 241,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 242,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 243,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 244,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 245,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 246,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 247,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 248,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 249,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 250,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 251,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 252,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 253,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 254,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 255,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 256,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 257,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 258,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 259,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 260,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 261,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 262,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 263,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 264,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 265,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 266,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 267,
+            "attrition_risk": 0.73
+        },
+        {
+            "EmployeeNumber": 268,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 269,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 270,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 271,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 272,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 273,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 274,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 275,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 276,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 277,
+            "attrition_risk": 0.73
+        },
+        {
+            "EmployeeNumber": 278,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 279,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 280,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 281,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 282,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 283,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 284,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 285,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 286,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 287,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 288,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 289,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 290,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 291,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 292,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 293,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 294,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 295,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 296,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 297,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 298,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 299,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 300,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 301,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 302,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 303,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 304,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 305,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 306,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 307,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 308,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 309,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 310,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 311,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 312,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 313,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 314,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 315,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 316,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 317,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 318,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 319,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 320,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 321,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 322,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 323,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 324,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 325,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 326,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 327,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 328,
+            "attrition_risk": 0.73
+        },
+        {
+            "EmployeeNumber": 329,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 330,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 331,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 332,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 333,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 334,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 335,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 336,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 337,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 338,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 339,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 340,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 341,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 342,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 343,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 344,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 345,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 346,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 347,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 348,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 349,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 350,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 351,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 352,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 353,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 354,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 355,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 356,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 357,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 358,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 359,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 360,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 361,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 362,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 363,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 364,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 365,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 366,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 367,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 368,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 369,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 370,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 371,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 372,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 373,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 374,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 375,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 376,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 377,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 378,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 379,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 380,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 381,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 382,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 383,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 384,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 385,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 386,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 387,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 388,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 389,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 390,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 391,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 392,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 393,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 394,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 395,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 396,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 397,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 398,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 399,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 400,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 401,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 402,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 403,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 404,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 405,
+            "attrition_risk": 0.73
+        },
+        {
+            "EmployeeNumber": 406,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 407,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 408,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 409,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 410,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 411,
+            "attrition_risk": 0.73
+        },
+        {
+            "EmployeeNumber": 412,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 413,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 414,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 415,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 416,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 417,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 418,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 419,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 420,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 421,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 422,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 423,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 424,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 425,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 426,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 427,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 428,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 429,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 430,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 431,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 432,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 433,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 434,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 435,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 436,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 437,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 438,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 439,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 440,
+            "attrition_risk": 0.73
+        },
+        {
+            "EmployeeNumber": 441,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 442,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 443,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 444,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 445,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 446,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 447,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 448,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 449,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 450,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 451,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 452,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 453,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 454,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 455,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 456,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 457,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 458,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 459,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 460,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 461,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 462,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 463,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 464,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 465,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 466,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 467,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 468,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 469,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 470,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 471,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 472,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 473,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 474,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 475,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 476,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 477,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 478,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 479,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 480,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 481,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 482,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 483,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 484,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 485,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 486,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 487,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 488,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 489,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 490,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 491,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 492,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 493,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 494,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 495,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 496,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 497,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 498,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 499,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 500,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 501,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 502,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 503,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 504,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 505,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 506,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 507,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 508,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 509,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 510,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 511,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 512,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 513,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 514,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 515,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 516,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 517,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 518,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 519,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 520,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 521,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 522,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 523,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 524,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 525,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 526,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 527,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 528,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 529,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 530,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 531,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 532,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 533,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 534,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 535,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 536,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 537,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 538,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 539,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 540,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 541,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 542,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 543,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 544,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 545,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 546,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 547,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 548,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 549,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 550,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 551,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 552,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 553,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 554,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 555,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 556,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 557,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 558,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 559,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 560,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 561,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 562,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 563,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 564,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 565,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 566,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 567,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 568,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 569,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 570,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 571,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 572,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 573,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 574,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 575,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 576,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 577,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 578,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 579,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 580,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 581,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 582,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 583,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 584,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 585,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 586,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 587,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 588,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 589,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 590,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 591,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 592,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 593,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 594,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 595,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 596,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 597,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 598,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 599,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 600,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 601,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 602,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 603,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 604,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 605,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 606,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 607,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 608,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 609,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 610,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 611,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 612,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 613,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 614,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 615,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 616,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 617,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 618,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 619,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 620,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 621,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 622,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 623,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 624,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 625,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 626,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 627,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 628,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 629,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 630,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 631,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 632,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 633,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 634,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 635,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 636,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 637,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 638,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 639,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 640,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 641,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 642,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 643,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 644,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 645,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 646,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 647,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 648,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 649,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 650,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 651,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 652,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 653,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 654,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 655,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 656,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 657,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 658,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 659,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 660,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 661,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 662,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 663,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 664,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 665,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 666,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 667,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 668,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 669,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 670,
+            "attrition_risk": 0.73
+        },
+        {
+            "EmployeeNumber": 671,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 672,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 673,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 674,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 675,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 676,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 677,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 678,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 679,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 680,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 681,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 682,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 683,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 684,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 685,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 686,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 687,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 688,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 689,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 690,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 691,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 692,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 693,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 694,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 695,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 696,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 697,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 698,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 699,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 700,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 701,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 702,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 703,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 704,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 705,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 706,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 707,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 708,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 709,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 710,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 711,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 712,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 713,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 714,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 715,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 716,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 717,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 718,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 719,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 720,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 721,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 722,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 723,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 724,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 725,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 726,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 727,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 728,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 729,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 730,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 731,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 732,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 733,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 734,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 735,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 736,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 737,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 738,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 739,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 740,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 741,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 742,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 743,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 744,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 745,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 746,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 747,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 748,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 749,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 750,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 751,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 752,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 753,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 754,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 755,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 756,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 757,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 758,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 759,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 760,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 761,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 762,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 763,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 764,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 765,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 766,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 767,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 768,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 769,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 770,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 771,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 772,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 773,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 774,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 775,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 776,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 777,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 778,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 779,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 780,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 781,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 782,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 783,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 784,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 785,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 786,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 787,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 788,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 789,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 790,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 791,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 792,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 793,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 794,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 795,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 796,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 797,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 798,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 799,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 800,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 801,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 802,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 803,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 804,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 805,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 806,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 807,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 808,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 809,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 810,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 811,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 812,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 813,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 814,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 815,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 816,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 817,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 818,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 819,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 820,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 821,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 822,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 823,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 824,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 825,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 826,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 827,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 828,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 829,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 830,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 831,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 832,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 833,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 834,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 835,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 836,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 837,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 838,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 839,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 840,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 841,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 842,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 843,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 844,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 845,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 846,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 847,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 848,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 849,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 850,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 851,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 852,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 853,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 854,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 855,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 856,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 857,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 858,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 859,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 860,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 861,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 862,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 863,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 864,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 865,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 866,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 867,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 868,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 869,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 870,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 871,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 872,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 873,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 874,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 875,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 876,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 877,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 878,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 879,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 880,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 881,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 882,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 883,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 884,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 885,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 886,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 887,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 888,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 889,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 890,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 891,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 892,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 893,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 894,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 895,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 896,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 897,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 898,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 899,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 900,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 901,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 902,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 903,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 904,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 905,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 906,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 907,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 908,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 909,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 910,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 911,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 912,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 913,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 914,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 915,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 916,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 917,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 918,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 919,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 920,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 921,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 922,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 923,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 924,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 925,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 926,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 927,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 928,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 929,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 930,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 931,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 932,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 933,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 934,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 935,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 936,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 937,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 938,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 939,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 940,
+            "attrition_risk": 0.73
+        },
+        {
+            "EmployeeNumber": 941,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 942,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 943,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 944,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 945,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 946,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 947,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 948,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 949,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 950,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 951,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 952,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 953,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 954,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 955,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 956,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 957,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 958,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 959,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 960,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 961,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 962,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 963,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 964,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 965,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 966,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 967,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 968,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 969,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 970,
+            "attrition_risk": 0.74
+        },
+        {
+            "EmployeeNumber": 971,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 972,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 973,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 974,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 975,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 976,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 977,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 978,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 979,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 980,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 981,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 982,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 983,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 984,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 985,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 986,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 987,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 988,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 989,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 990,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 991,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 992,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 993,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 994,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 995,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 996,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 997,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 998,
+            "attrition_risk": 0.71
+        },
+        {
+            "EmployeeNumber": 999,
+            "attrition_risk": 0.72
+        },
+        {
+            "EmployeeNumber": 1000,
+            "attrition_risk": 0.72
+        }
+    ],
+    "metrics": {
+        "high_risk_count": 863,
+        "avg_risk": 0.7094400000000001,
+        "risk_distribution": {
+            "count": 1000.0,
+            "mean": 0.7094400000000001,
+            "std": 0.029956364662351777,
+            "min": 0.59,
+            "25%": 0.71,
+            "50%": 0.72,
+            "75%": 0.72,
+            "max": 0.74
+        }
+    },
+    "feature_importance": {
+        "Age": 0.10861423220973784,
+        "YearsAtCompany": 0.10861423220973782,
+        "YearsWithCurrManager": 0.0898876404494382,
+        "YearsInCurrentRole": 0.08239700374531835,
+        "Salary": 0.0749063670411985,
+        "JobRole_Developer": 0.07490636704119849,
+        "Department_IT": 0.056179775280898875,
+        "NumCompaniesWorked": 0.048689138576779034,
+        "TrainingTimesLastYear": 0.0449438202247191,
+        "EducationField_Technical Degree": 0.0449438202247191,
+        "Department_HR": 0.03745318352059925,
+        "Education": 0.033707865168539325,
+        "TotalWorkingYears": 0.033707865168539325,
+        "EducationField_Medical": 0.026217228464419477,
+        "Gender_Male": 0.02247191011235955,
+        "EducationField_Other": 0.02247191011235955,
+        "JobSatisfaction": 0.02247191011235955,
+        "WorkLifeBalance": 0.02247191011235955,
+        "JobRole_HR Manager": 0.018726591760299623,
+        "EducationField_Marketing": 0.011235955056179775,
+        "PerformanceRating": 0.011235955056179775,
+        "MaritalStatus_Married": 0.0037453183520599247,
+        "YearsSinceLastPromotion": 0.0,
+        "MaritalStatus_Single": 0.0
+    }
+}

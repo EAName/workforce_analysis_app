@@ -94,61 +94,48 @@ class AttritionAgent(BaseAgent):
             self.logger.error(f"Error loading model: {str(e)}")
             return False
     
-    def analyze(self, data: pd.DataFrame, **kwargs) -> Dict[str, Any]:
-        """Analyze attrition risk for employees"""
+    def analyze(self, df: pd.DataFrame) -> Dict[str, Any]:
+        """Analyze attrition risk for the given data"""
         try:
-            # Validate input
-            if not self.validate_input(data):
+            # Validate input data
+            if not self.validate_input(df):
                 raise ValueError("Invalid input data")
             
-            # Load or train model
-            if not self.load_model():
-                self.model, self.scaler, self.feature_columns = self.train_model(data)
+            # Load or train model if not already done
+            if not hasattr(self, 'model') or not hasattr(self, 'feature_columns'):
+                self.model, self.scaler, self.feature_columns = self.train_model(df)
             
-            # Preprocess data
-            df = self.preprocess_data(data)
+            # Get predictions
+            results = predict_attrition(df)
             
-            # Ensure all required features are present
-            for col in self.feature_columns:
-                if col not in df.columns:
-                    df[col] = 0
+            # Calculate metrics
+            high_risk_threshold = 0.7
+            high_risk_count = len(results[results['attrition_risk'] > high_risk_threshold])
+            avg_risk = results['attrition_risk'].mean()
+            risk_distribution = results['attrition_risk'].describe()
             
-            # Select features in correct order
-            X = df[self.feature_columns]
-            
-            # Scale features
-            X_scaled = self.scaler.transform(X)
-            
-            # Make predictions
-            attrition_risk = self.model.predict_proba(X_scaled)[:, 1]
-            
-            # Create results
-            results = pd.DataFrame({
-                'EmployeeNumber': data['EmployeeNumber'],
-                'attrition_risk': attrition_risk
-            })
-            
-            # Calculate additional metrics
-            metrics = {
-                'high_risk_count': len(results[results['attrition_risk'] > 0.7]),
-                'avg_risk': results['attrition_risk'].mean(),
-                'risk_distribution': results['attrition_risk'].describe().to_dict()
-            }
-            
-            # Save results
-            self.save_results({
-                'predictions': results.to_dict(orient='records'),
-                'metrics': metrics
-            }, 'attrition_results.json')
+            # Get feature importance
+            feature_importance = self.get_feature_importance(df)
             
             return {
-                'predictions': results,
-                'metrics': metrics
+                'risk_scores': results,
+                'metrics': {
+                    'high_risk_count': high_risk_count,
+                    'avg_risk': avg_risk,
+                    'risk_distribution': risk_distribution.to_dict()
+                },
+                'feature_importance': feature_importance
             }
-        
         except Exception as e:
-            self.logger.error(f"Error analyzing attrition: {str(e)}")
+            self.logger.error(f"Error in analysis: {str(e)}")
             raise
+    
+    def get_feature_importance(self, df: pd.DataFrame) -> pd.Series:
+        """Compute feature importance from the trained model"""
+        if not hasattr(self, 'model') or not hasattr(self, 'feature_columns'):
+            raise ValueError("Model not trained. Call train_model first.")
+        importances = self.model.feature_importances_
+        return pd.Series(importances, index=self.feature_columns).sort_values(ascending=False)
 
 # Create singleton instance
 attrition_agent = AttritionAgent()
