@@ -19,9 +19,9 @@ def analyze_skill_gap(df, resume_texts, transcripts, skill_course_map):
 
     Returns:
     - recommendations: list of dicts, each with:
-        • 'employee_id'
-        • 'missing_skills'
-        • 'recommendations'
+        'employee_id'
+        'missing_skills'
+        'recommendations'
     """
     recommendations = []
     
