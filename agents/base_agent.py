@@ -1,8 +1,10 @@
 from abc import ABC, abstractmethod
 import pandas as pd
-from typing import Any, Dict, Optional
+import numpy as np
+from typing import Any, Dict, Optional, List
 from utils.logger import logger
 from config.config import config
+from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 class BaseAgent(ABC):
     """Base class for all analysis agents"""
@@ -11,6 +13,8 @@ class BaseAgent(ABC):
         self.name = name
         self.logger = logger
         self.config = config
+        self.scalers = {}
+        self.encoders = {}
     
     @abstractmethod
     def analyze(self, data: pd.DataFrame, **kwargs) -> Dict[str, Any]:
@@ -31,6 +35,13 @@ class BaseAgent(ABC):
             if missing_cols:
                 self.logger.error(f"Missing required columns: {missing_cols}")
                 return False
+            
+            # Validate column types
+            for col, expected_type in self.config.data.required_columns.items():
+                if col in data.columns:
+                    if str(data[col].dtype) != expected_type:
+                        self.logger.error(f"Column {col} has incorrect type. Expected {expected_type}, got {data[col].dtype}")
+                        return False
             
             return True
         
@@ -61,6 +72,26 @@ class BaseAgent(ABC):
                             df[col] = pd.to_datetime(df[col])
                         except:
                             self.logger.warning(f"Could not convert {col} to datetime")
+            
+            # Encode categorical variables
+            if 'encode_categorical' in self.config.data.preprocessing_steps:
+                for col in self.config.data.categorical_columns:
+                    if col in df.columns:
+                        if col not in self.encoders:
+                            self.encoders[col] = LabelEncoder()
+                            df[col] = self.encoders[col].fit_transform(df[col])
+                        else:
+                            df[col] = self.encoders[col].transform(df[col])
+            
+            # Scale numeric variables
+            if 'scale_numeric' in self.config.data.preprocessing_steps:
+                for col in self.config.data.numeric_columns:
+                    if col in df.columns:
+                        if col not in self.scalers:
+                            self.scalers[col] = StandardScaler()
+                            df[col] = self.scalers[col].fit_transform(df[col].values.reshape(-1, 1))
+                        else:
+                            df[col] = self.scalers[col].transform(df[col].values.reshape(-1, 1))
             
             return df
         

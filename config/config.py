@@ -132,8 +132,16 @@ class Config:
         data = DataConfig(
             required_columns=HR_SCHEMA.columns,
             date_columns=["HireDate", "TerminationDate"],
-            categorical_columns=["Department", "JobRole", "EducationField", "Gender"],
-            numeric_columns=["Age", "Salary", "YearsAtCompany", "JobSatisfaction"],
+            categorical_columns=[
+                "Department", "JobRole", "EducationField", "Gender",
+                "MaritalStatus", "Attrition"
+            ],
+            numeric_columns=[
+                "Age", "Salary", "YearsAtCompany", "JobSatisfaction",
+                "WorkLifeBalance", "PerformanceRating", "Education",
+                "NumCompaniesWorked", "TotalWorkingYears", "TrainingTimesLastYear",
+                "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"
+            ],
             preprocessing_steps=[
                 "handle_missing_values",
                 "convert_dates",

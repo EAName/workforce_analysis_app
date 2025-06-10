@@ -21,8 +21,8 @@ class AttritionAgent(BaseAgent):
     def train_model(self, data: pd.DataFrame) -> Tuple[RandomForestClassifier, StandardScaler, list]:
         """Train the attrition prediction model"""
         try:
-            # Preprocess data
-            df = self.preprocess_data(data)
+            # Preprocess data using the standalone function to drop date columns
+            df = preprocess_data(data)
             
             # Prepare features and target
             X = df.drop(['Attrition', 'EmployeeNumber'], axis=1, errors='ignore')
@@ -41,10 +41,13 @@ class AttritionAgent(BaseAgent):
             X_test_scaled = scaler.transform(X_test)
             
             # Train model
+            rf_params = self.config.model.model_params["RandomForest"].copy() if self.config.model.model_params and "RandomForest" in self.config.model.model_params else {}
+            rf_params.pop("n_estimators", None)
+            rf_params.pop("random_state", None)
             model = RandomForestClassifier(
                 n_estimators=self.config.model.n_estimators,
                 random_state=self.config.model.random_state,
-                **self.config.model.model_params
+                **rf_params
             )
             model.fit(X_train_scaled, y_train)
             
@@ -55,7 +58,10 @@ class AttritionAgent(BaseAgent):
             # Log evaluation metrics
             self.logger.info("\nModel Evaluation:")
             self.logger.info(classification_report(y_test, y_pred))
-            self.logger.info(f"ROC AUC Score: {roc_auc_score(y_test, y_pred_proba):.3f}")
+            try:
+                self.logger.info(f"ROC AUC Score: {roc_auc_score(y_test, y_pred_proba):.3f}")
+            except ValueError as ve:
+                self.logger.warning(f"ROC AUC Score could not be computed: {ve}")
             
             # Save model and scaler
             os.makedirs(self.config.model.model_dir, exist_ok=True)
@@ -149,9 +155,12 @@ attrition_agent = AttritionAgent()
 
 def preprocess_data(df):
     """Preprocess the HR data for attrition prediction"""
-    # Convert categorical variables to numeric
-    categorical_cols = df.select_dtypes(include=['object']).columns
-    df_processed = pd.get_dummies(df, columns=categorical_cols, drop_first=True)
+    # Drop date columns and non-feature columns
+    df_processed = df.drop(['HireDate', 'TerminationDate'], axis=1, errors='ignore')
+    
+    # Identify categorical columns except 'Attrition'
+    categorical_cols = [col for col in df_processed.select_dtypes(include=['object']).columns if col != 'Attrition']
+    df_processed = pd.get_dummies(df_processed, columns=categorical_cols, drop_first=True)
     
     # Handle missing values
     df_processed = df_processed.fillna(df_processed.mean())
@@ -166,8 +175,9 @@ def predict_attrition(df):
         scaler = joblib.load('models/attrition_scaler.joblib')
         feature_columns = joblib.load('models/attrition_features.joblib')
     except:
-        # If model doesn't exist, train new one
-        model, scaler, feature_columns = train_attrition_model(df)
+        # If model doesn't exist, train new one using AttritionAgent
+        agent = AttritionAgent()
+        model, scaler, feature_columns = agent.train_model(df)
         joblib.dump(feature_columns, 'models/attrition_features.joblib')
     
     # Preprocess new data

@@ -94,13 +94,22 @@ HR_SCHEMA = DataSchema(
             name="Department",
             type=ColumnType.STRING,
             description="Employee department",
-            allowed_values=["IT", "HR", "Finance", "Marketing", "Operations"]
+            allowed_values=["IT", "HR", "Finance", "Marketing", "Operations", "Sales", "Research", "Engineering"]
         ),
         "JobRole": ColumnDefinition(
             name="JobRole",
             type=ColumnType.STRING,
             description="Employee job role",
-            allowed_values=["Developer", "Manager", "Analyst", "Designer", "Consultant"]
+            allowed_values=[
+                "Developer", "Engineer", "System Administrator", "IT Manager", "Technical Specialist",
+                "HR Manager", "HR Specialist", "Recruiter", "HR Director",
+                "Financial Analyst", "Accountant", "Finance Manager", "Controller",
+                "Marketing Specialist", "Marketing Manager", "Brand Manager", "Marketing Director",
+                "Operations Manager", "Operations Specialist", "Supply Chain Manager",
+                "Sales Representative", "Sales Manager", "Account Executive", "Sales Director",
+                "Research Scientist", "Research Analyst", "Research Director",
+                "Senior Engineer", "Engineering Manager", "Technical Director"
+            ]
         ),
         "Salary": ColumnDefinition(
             name="Salary",
@@ -152,6 +161,73 @@ HR_SCHEMA = DataSchema(
             type=ColumnType.DATETIME,
             required=False,
             description="Employee termination date"
+        ),
+        "Education": ColumnDefinition(
+            name="Education",
+            type=ColumnType.INTEGER,
+            description="Education level",
+            min_value=1,
+            max_value=5
+        ),
+        "EducationField": ColumnDefinition(
+            name="EducationField",
+            type=ColumnType.STRING,
+            description="Field of education",
+            allowed_values=["Life Sciences", "Medical", "Marketing", "Technical Degree", "Other", "Human Resources"]
+        ),
+        "Gender": ColumnDefinition(
+            name="Gender",
+            type=ColumnType.STRING,
+            description="Employee gender",
+            allowed_values=["Male", "Female"]
+        ),
+        "MaritalStatus": ColumnDefinition(
+            name="MaritalStatus",
+            type=ColumnType.STRING,
+            description="Employee marital status",
+            allowed_values=["Single", "Married", "Divorced"]
+        ),
+        "NumCompaniesWorked": ColumnDefinition(
+            name="NumCompaniesWorked",
+            type=ColumnType.INTEGER,
+            description="Number of companies worked at",
+            min_value=0,
+            max_value=20
+        ),
+        "TotalWorkingYears": ColumnDefinition(
+            name="TotalWorkingYears",
+            type=ColumnType.INTEGER,
+            description="Total years of work experience",
+            min_value=0,
+            max_value=50
+        ),
+        "TrainingTimesLastYear": ColumnDefinition(
+            name="TrainingTimesLastYear",
+            type=ColumnType.INTEGER,
+            description="Number of training sessions attended last year",
+            min_value=0,
+            max_value=10
+        ),
+        "YearsInCurrentRole": ColumnDefinition(
+            name="YearsInCurrentRole",
+            type=ColumnType.INTEGER,
+            description="Years in current role",
+            min_value=0,
+            max_value=50
+        ),
+        "YearsSinceLastPromotion": ColumnDefinition(
+            name="YearsSinceLastPromotion",
+            type=ColumnType.INTEGER,
+            description="Years since last promotion",
+            min_value=0,
+            max_value=50
+        ),
+        "YearsWithCurrManager": ColumnDefinition(
+            name="YearsWithCurrManager",
+            type=ColumnType.INTEGER,
+            description="Years with current manager",
+            min_value=0,
+            max_value=50
         )
     }
 ) 
