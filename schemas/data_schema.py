@@ -45,10 +45,12 @@ class DataSchema(BaseModel):
         # Check column types
         for col, defn in self.columns.items():
             if col in df.columns:
-                if str(df[col].dtype) != defn.type.value:
+                expected_type = defn.type.value
+                actual_type = str(df[col].dtype)
+                if actual_type != expected_type:
                     raise ValueError(
                         f"Column {col} has incorrect type. "
-                        f"Expected {defn.type.value}, got {df[col].dtype}"
+                        f"Expected {expected_type}, got {actual_type}"
                     )
 
                 # Check allowed values
