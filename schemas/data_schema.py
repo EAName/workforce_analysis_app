@@ -237,4 +237,8 @@ HR_SCHEMA = DataSchema(
             max_value=50
         )
     }
-) 
+)
+
+def validate_dataframe(df: pd.DataFrame) -> bool:
+    """Validate a DataFrame against the HR schema"""
+    return HR_SCHEMA.validate_dataframe(df) 

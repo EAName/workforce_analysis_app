@@ -5,6 +5,7 @@ from typing import Any, Dict, Optional, List
 from utils.logger import logger
 from config.config import config
 from sklearn.preprocessing import StandardScaler, LabelEncoder
+from schemas.data_schema import validate_dataframe
 
 class BaseAgent(ABC):
     """Base class for all analysis agents"""
@@ -22,28 +23,20 @@ class BaseAgent(ABC):
         pass
     
     def validate_input(self, data: pd.DataFrame) -> bool:
-        """Validate input data"""
+        """Validate input data using schema validation"""
         try:
             # Check if data is empty
             if data.empty:
                 self.logger.error("Input data is empty")
                 return False
             
-            # Check required columns
-            required_cols = self.config.data.required_columns.keys()
-            missing_cols = [col for col in required_cols if col not in data.columns]
-            if missing_cols:
-                self.logger.error(f"Missing required columns: {missing_cols}")
+            # Use schema validation
+            try:
+                validate_dataframe(data)
+                return True
+            except ValueError as e:
+                self.logger.error(f"Schema validation failed: {str(e)}")
                 return False
-            
-            # Validate column types
-            for col, expected_type in self.config.data.required_columns.items():
-                if col in data.columns:
-                    if str(data[col].dtype) != expected_type:
-                        self.logger.error(f"Column {col} has incorrect type. Expected {expected_type}, got {data[col].dtype}")
-                        return False
-            
-            return True
         
         except Exception as e:
             self.logger.error(f"Error validating input: {str(e)}")
