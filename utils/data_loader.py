@@ -30,8 +30,16 @@ class DataLoader:
                     f"{self.config.app.max_upload_size / (1024 * 1024)}MB"
                 )
             
-            # Read CSV file
-            df = pd.read_csv(file_path, parse_dates=['HireDate', 'TerminationDate'])
+            # Read CSV file with explicit data types
+            dtype_dict = {
+                col: defn.type.value for col, defn in self.schema.columns.items()
+                if defn.type != ColumnType.DATETIME
+            }
+            df = pd.read_csv(
+                file_path,
+                dtype=dtype_dict,
+                parse_dates=['HireDate', 'TerminationDate']
+            )
             self.logger.info(f"Successfully loaded data with {len(df)} rows")
             
             # Validate data
