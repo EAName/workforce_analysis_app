@@ -111,30 +111,68 @@ The application expects HR data in CSV format with the following required column
 
 ```
 workforce_analysis_app/
-├── app.py                 # Main Streamlit application
-├── config/               # Configuration files
-│   ├── config.py        # Configuration management
-│   └── default_config.yaml
-├── agents/              # AI analysis agents
-│   ├── base_agent.py    # Base agent class
-│   ├── attrition_agent.py    # Attrition prediction
-│   ├── diversity_agent.py    # Diversity metrics
-│   ├── skill_gap_agent.py    # Skill analysis
-│   ├── planning_agent.py     # Workforce planning
-│   └── simulation_agent.py   # Intervention simulation
-├── schemas/             # Data validation schemas
+├── agents/                     # Analysis agent implementations
+│   ├── attrition_agent.py     # Attrition prediction and analysis
+│   ├── base_agent.py          # Base agent class with common functionality
+│   ├── diversity_agent.py     # Diversity metrics and analysis
+│   ├── planning_agent.py      # Workforce planning and forecasting
+│   ├── productivity_agent.py  # Productivity analysis
+│   ├── simulation_agent.py    # Attrition simulation and interventions
+│   └── skill_gap_agent.py     # Skill gap analysis and recommendations
+│
+├── api/                       # FastAPI implementation
+│   ├── attrition_api.py      # Attrition analysis endpoints
+│   ├── base_api.py           # Base API class with common functionality
+│   ├── diversity_api.py      # Diversity analysis endpoints
+│   ├── main.py               # Main FastAPI application
+│   ├── planning_api.py       # Workforce planning endpoints
+│   ├── simulation_api.py     # Simulation endpoints
+│   └── skill_gap_api.py      # Skill gap analysis endpoints
+│
+├── config/                    # Configuration files
+│   ├── config.py             # Configuration management
+│   └── default_config.yaml   # Default configuration values
+│
+├── data/                      # Data directory
+│   └── synthetic_hr_data.csv # Sample HR data
+│
+├── logs/                      # Application logs
+│
+├── models/                    # Trained models and artifacts
+│   ├── attrition_features.joblib
+│   ├── attrition_model.joblib
+│   └── attrition_scaler.joblib
+│
+├── results/                   # Analysis results
+│   └── attrition_results.json
+│
+├── schemas/                   # Data schemas and validation
 │   └── data_schema.py
-├── utils/              # Utility functions
-│   ├── data_loader.py
-│   └── logger.py
-├── tests/              # Test suite
+│
+├── tests/                     # Test suite
+│   ├── conftest.py           # Test configuration and fixtures
 │   ├── test_attrition_agent.py
+│   ├── test_attrition_api.py
 │   ├── test_diversity_agent.py
-│   ├── test_skill_gap_agent.py
+│   ├── test_diversity_api.py
 │   ├── test_planning_agent.py
-│   └── test_simulation_agent.py
-├── requirements.txt    # Project dependencies
-└── README.md          # Project documentation
+│   ├── test_planning_api.py
+│   ├── test_simulation_agent.py
+│   ├── test_simulation_api.py
+│   ├── test_skill_gap_agent.py
+│   └── test_skill_gap_api.py
+│
+├── utils/                     # Utility functions
+│   ├── data_generator.py     # Synthetic data generation
+│   ├── data_loader.py        # Data loading utilities
+│   ├── logger.py             # Logging configuration
+│   └── visualization.py      # Data visualization utilities
+│
+├── app.py                     # Streamlit web application
+├── Dockerfile                 # Container configuration
+├── README.md                  # Project documentation
+├── requirements.txt           # Python dependencies
+└── setup.py                   # Package configuration
 ```
 
 ## AI Agents
