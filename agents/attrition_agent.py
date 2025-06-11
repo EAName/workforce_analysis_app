@@ -153,7 +153,7 @@ def preprocess_data(df):
     df_processed = pd.get_dummies(df_processed, columns=categorical_cols, drop_first=True)
     
     # Handle missing values
-    df_processed = df_processed.fillna(df_processed.mean())
+    df_processed = df_processed.fillna(df_processed.mean(numeric_only=True))
     
     return df_processed
 

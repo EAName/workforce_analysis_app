@@ -8,7 +8,7 @@ def simulate_attrition_interventions(df: pd.DataFrame,
     Simulate retention what-if scenarios by reducing attrition risk for participants.
 
     Parameters:
-    - df: DataFrame with columns ['employee_id', 'attrited'] plus risk features.
+    - df: DataFrame with columns ['EmployeeNumber', 'Attrition'] plus risk features.
     - intervention: {
           'type': str,
           'effect_size_pct': float,    # % reduction in individual risk
@@ -21,7 +21,7 @@ def simulate_attrition_interventions(df: pd.DataFrame,
     """
     # Copy and ensure attrited is numeric 0/1
     data = df.copy()
-    data['attrited'] = data['attrited'].astype(int)
+    data['attrited'] = (data['Attrition'] == 'Yes').astype(int)
 
     # Baseline metrics
     total = len(data)
@@ -38,7 +38,7 @@ def simulate_attrition_interventions(df: pd.DataFrame,
 
     # Apply risk reduction: reduce attrition probability for participants
     # Here we assume attrited==1 means they would leave without intervention.
-    # We “rescue” a fraction = effect_size_pct of those cases.
+    # We "rescue" a fraction = effect_size_pct of those cases.
     effect = intervention.get('effect_size_pct', 0) / 100.0
 
     # Count rescued attritions among participants
