@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from utils.data_loader import data_loader
-from utils.logger import logger
+from utils.logger import logger, log_info, log_error, log_warning, log_debug
 from config.config import config
 from agents.attrition_agent import AttritionAgent
 from agents.simulation_agent import simulate_attrition_interventions
@@ -17,12 +17,16 @@ import os
 # Initialize session state
 if 'data' not in st.session_state:
     st.session_state.data = None
+    log_debug("Initialized data session state")
 if 'model' not in st.session_state:
     st.session_state.model = None
+    log_debug("Initialized model session state")
 if 'agent' not in st.session_state:
     st.session_state.agent = None
+    log_debug("Initialized agent session state")
 
 def main():
+    log_info("Starting AI Workforce Analysis application")
     st.set_page_config(
         page_title="AI Workforce Analysis",
         page_icon="👥",
@@ -46,31 +50,38 @@ def main():
         )
         
         if uploaded_file is not None:
+            log_info(f"File uploaded: {uploaded_file.name}")
             try:
                 # Save uploaded file temporarily
                 temp_path = Path(config.paths.temp_dir) / uploaded_file.name
                 temp_path.parent.mkdir(parents=True, exist_ok=True)
+                log_debug(f"Created temporary file path: {temp_path}")
                 
                 with open(temp_path, 'wb') as f:
                     f.write(uploaded_file.getvalue())
                 
                 # Load and process data
+                log_info("Loading and processing data")
                 df = data_loader.load_data(str(temp_path))
                 st.session_state.data = df
+                log_info(f"Successfully loaded data with {len(df)} rows")
                 
                 # Clean up temporary file
                 os.remove(temp_path)
+                log_debug("Cleaned up temporary file")
                 
                 st.success("Data loaded successfully!")
                 
             except Exception as e:
-                st.error(f"Error loading data: {str(e)}")
-                logger.error(f"Error loading data: {str(e)}")
+                error_msg = f"Error loading data: {str(e)}"
+                log_error(error_msg)
+                st.error(error_msg)
                 return
     
     # Main content
     if st.session_state.data is not None:
         df = st.session_state.data
+        log_debug("Displaying data overview")
         
         # Data Overview
         st.header("Data Overview")
@@ -85,6 +96,7 @@ def main():
         
         # Data Visualization
         st.header("Data Visualization")
+        log_debug("Generating data visualizations")
         
         # Department Distribution
         fig_dept = px.pie(
@@ -124,17 +136,22 @@ def main():
         with tab1:
             st.header("Attrition Analysis")
             if st.button("Run Attrition Analysis"):
+                log_info("Starting attrition analysis")
                 try:
                     with st.spinner("Running analysis..."):
                         # Initialize agent if not exists
                         if st.session_state.agent is None:
+                            log_debug("Initializing new AttritionAgent")
                             st.session_state.agent = AttritionAgent()
                         
                         # Run analysis
+                        log_info("Running attrition analysis")
                         results = st.session_state.agent.analyze(df)
+                        log_info("Attrition analysis completed successfully")
                         
                         # Display results
                         st.subheader("Attrition Risk Factors")
+                        log_debug("Displaying analysis results")
                         
                         # Feature importance plot
                         fig_importance = px.bar(
@@ -156,6 +173,7 @@ def main():
                         st.subheader("High-Risk Employees")
                         high_risk = results['high_risk_employees']
                         st.dataframe(high_risk)
+                        log_info(f"Identified {len(high_risk)} high-risk employees")
                         
                         # Download results
                         csv = high_risk.to_csv(index=False)
@@ -167,19 +185,24 @@ def main():
                         )
                 
                 except Exception as e:
-                    st.error(f"Error running analysis: {str(e)}")
-                    logger.error(f"Error running analysis: {str(e)}")
+                    error_msg = f"Error running analysis: {str(e)}"
+                    log_error(error_msg)
+                    st.error(error_msg)
         
         with tab2:
             st.header("Diversity Analysis")
             if st.button("Run Diversity Analysis"):
+                log_info("Starting diversity analysis")
                 try:
                     with st.spinner("Running diversity analysis..."):
                         # Run diversity analysis
+                        log_debug("Running diversity metrics calculation")
                         diversity_metrics = monitor_diversity(df)
+                        log_info("Diversity analysis completed successfully")
                         
                         # Display metrics
                         st.subheader("Diversity Metrics")
+                        log_debug("Displaying diversity metrics")
                         
                         # Gender ratio
                         st.metric(
@@ -246,8 +269,9 @@ def main():
                         st.plotly_chart(fig_turnover, use_container_width=True)
                 
                 except Exception as e:
-                    st.error(f"Error running diversity analysis: {str(e)}")
-                    logger.error(f"Error running diversity analysis: {str(e)}")
+                    error_msg = f"Error running diversity analysis: {str(e)}"
+                    log_error(error_msg)
+                    st.error(error_msg)
         
         with tab3:
             st.header("Skill Gap Analysis")
@@ -400,4 +424,8 @@ def main():
                     logger.error(f"Error running simulation: {str(e)}")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        log_error(f"Application crashed: {str(e)}")
+        raise
