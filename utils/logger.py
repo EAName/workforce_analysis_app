@@ -1,34 +1,77 @@
 import logging
+from logging.handlers import RotatingFileHandler
 import os
 from datetime import datetime
+from config.config import config
 
-def setup_logger(name, log_level=logging.INFO):
-    """Set up and configure logger"""
+def setup_logger(name: str, log_level: str = None) -> logging.Logger:
+    """
+    Set up and configure logger with rotating file handler
+    
+    Args:
+        name (str): Name of the logger
+        log_level (str): Logging level (defaults to config setting)
+    
+    Returns:
+        logging.Logger: Configured logger instance
+    """
+    # Get logging configuration
+    log_config = config.logging
+    
     # Create logs directory if it doesn't exist
-    os.makedirs('logs', exist_ok=True)
+    os.makedirs(os.path.dirname(log_config.file), exist_ok=True)
     
     # Create logger
     logger = logging.getLogger(name)
-    logger.setLevel(log_level)
     
-    # Create handlers
+    # Set log level from config or parameter
+    level = getattr(logging, log_level.upper()) if log_level else getattr(logging, log_config.level.upper())
+    logger.setLevel(level)
+    
+    # Remove existing handlers to avoid duplicates
+    logger.handlers = []
+    
+    # Create console handler
     console_handler = logging.StreamHandler()
-    file_handler = logging.FileHandler(
-        f'logs/{name}_{datetime.now().strftime("%Y%m%d")}.log'
-    )
+    console_handler.setLevel(level)
     
-    # Create formatters and add it to handlers
-    log_format = logging.Formatter(
-        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    # Create rotating file handler
+    file_handler = RotatingFileHandler(
+        log_config.file,
+        maxBytes=log_config.max_size,
+        backupCount=log_config.backup_count
     )
-    console_handler.setFormatter(log_format)
-    file_handler.setFormatter(log_format)
+    file_handler.setLevel(level)
     
-    # Add handlers to the logger
+    # Create formatter
+    formatter = logging.Formatter(log_config.format)
+    
+    # Add formatter to handlers
+    console_handler.setFormatter(formatter)
+    file_handler.setFormatter(formatter)
+    
+    # Add handlers to logger
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
     
     return logger
 
 # Create default logger
-logger = setup_logger('workforce_analysis') 
+logger = setup_logger('workforce_analysis')
+
+# Add convenience functions for common logging operations
+def log_error(message: str, exc_info: bool = True):
+    """Log error message with optional exception info"""
+    logger.error(message, exc_info=exc_info)
+
+def log_warning(message: str):
+    """Log warning message"""
+    logger.warning(message)
+
+def log_info(message: str):
+    """Log info message"""
+    logger.info(message)
+
+def log_debug(message: str):
+    """Log debug message"""
+    logger.debug(message) 
